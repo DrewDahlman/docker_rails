@@ -15,21 +15,21 @@ Super simple setup for Rails & Docker!
 This creates our bundle container and DB
 <pre>
 bundle:
-  container_name: docker_rails
-  image: ruby:latest
-  command: /bin/true
-  volumes:
-    - /bundle
+	container_name: docker_rails
+	image: ruby:latest
+	command: /bin/true
+	volumes:
+		- /bundle
 db:
 	container_name: docker_rails_db
 	image: postgres
 	ports:
-	  - "5432:5432"
+		- "5432:5432"
 	environment:
-	  - POSTGRES_USER=dev
-	  - POSTGRES_PASSWORD=secret
+		- POSTGRES_USER=dev
+		- POSTGRES_PASSWORD=secret
 	volumes:
-	  - "db-data:/var/lib/postgresql/data"
+		- "db-data:/var/lib/postgresql/data"
 </pre>
 
 you'll notice later when we define our app we reference these, essentially we are referencing how these containers come together.
