@@ -1,7 +1,7 @@
 Docker Rails
 ==================
 
-Super simple setup for Rails & Docker!
+Super simple setup for Rails & Docker! This is super bare bones, but shows off what makes docker super neat to work with.
 
 ## Setup
 - have docker installed ( https://docs.docker.com/docker-for-mac/install/ )
